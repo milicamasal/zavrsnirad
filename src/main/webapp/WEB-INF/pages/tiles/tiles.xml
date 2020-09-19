@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+    <definition name="base-definition"  template="/WEB-INF/pages/tiles/layout/defaultLayout.jsp">
+        <put-attribute name="title" value=""></put-attribute>
+        <put-attribute name="header"
+                       value="/WEB-INF/pages/tiles/template/defaultHeader.jsp">
+        </put-attribute>
+
+        <put-attribute name="menu"
+                       value="">
+        </put-attribute>
+        <put-attribute name="body" value=""></put-attribute>
+    </definition>
+
+    <!-- Login page -->
+    <definition name="login" extends="base-definition">
+        <put-attribute name="title" value="Login page"></put-attribute>
+        <put-attribute name="body"
+                       value="/WEB-INF/pages/login.jsp">
+        </put-attribute>
+       
+    </definition>
+    <definition name="access-denied" extends="base-definition">
+        <put-attribute name="title" value="Login page"></put-attribute>
+        <put-attribute name="body"
+                       value="/WEB-INF/pages/access-denied.jsp">
+        </put-attribute>
+       
+    </definition>
+    <definition name="home" extends="base-definition">
+        <put-attribute name="title" value="Home page"></put-attribute>
+        <put-attribute name="body"
+                       value="/WEB-INF/pages/home.jsp">
+        </put-attribute>
+       
+    </definition>
+    <!-- Movie -->
+    
+    <definition name="movie/add" extends="base-definition">
+        <put-attribute name="title" value="Movie add"></put-attribute>
+        <put-attribute name="menu"
+                       value="/WEB-INF/pages/menus/AdminMenu.jsp">
+        </put-attribute>
+        <put-attribute name="body"
+                       value="/WEB-INF/pages/admin/movie/add.jsp">
+        </put-attribute>
+    </definition>
+    
+    <definition name="movie/all" extends="base-definition">
+        <put-attribute name="title" value="All movies"></put-attribute>
+        <put-attribute name="menu"
+                       value="/WEB-INF/pages/menus/AdminMenu.jsp">
+        </put-attribute>
+        <put-attribute name="body"
+                       value="/WEB-INF/pages/admin/movie/all.jsp">
+        </put-attribute>
+    </definition>
+    
+    <definition name="movie/view" extends="base-definition">
+        <put-attribute name="title" value="View Movie Theater"></put-attribute>
+        <put-attribute name="menu"
+                       value="/WEB-INF/pages/menus/AdminMenu.jsp">
+        </put-attribute>
+        
+        <put-attribute name="body"
+                       value="/WEB-INF/pages/admin/movie/view.jsp">
+        </put-attribute>
+    </definition>
+  
+
+    <!--Movie Theater-->
+    <definition name="movietheater/add" extends="base-definition">
+        <put-attribute name="title" value="MovieTheater add"></put-attribute>
+        <put-attribute name="menu"
+                       value="/WEB-INF/pages/menus/AdminMenu.jsp">
+        </put-attribute>
+        <put-attribute name="body"
+                       value="/WEB-INF/pages/admin/movietheater/add.jsp">
+        </put-attribute>
+    </definition>
+    
+    <definition name="movietheater/all" extends="base-definition">
+        <put-attribute name="title" value="All movie theaters"></put-attribute>
+        <put-attribute name="menu"
+                       value="/WEB-INF/pages/menus/AdminMenu.jsp">
+        </put-attribute>
+        <put-attribute name="body"
+                       value="/WEB-INF/pages/admin/movietheater/all.jsp">
+        </put-attribute>
+    </definition>
+    
+    <definition name="movietheater/view" extends="base-definition">
+        <put-attribute name="title" value="View Movie Theater"></put-attribute>
+        <put-attribute name="menu"
+                       value="/WEB-INF/pages/menus/AdminMenu.jsp">
+        </put-attribute>
+        
+        <put-attribute name="body"
+                       value="/WEB-INF/pages/admin/movietheater/view.jsp">
+        </put-attribute>
+    </definition>
+    
+    
+    
+  
+
+    <!--Projection-->
+    
+    
+    <definition name="projection/all" extends="base-definition">
+        <put-attribute name="title" value="All projecions"></put-attribute>
+        <put-attribute name="menu"
+                       value="/WEB-INF/pages/menus/EmployeeMenu.jsp">
+        </put-attribute>
+        <put-attribute name="body"
+                       value="/WEB-INF/pages/employee/projection/all.jsp">
+        </put-attribute>
+    </definition>
+    
+    <definition name="projection/add" extends="base-definition">
+        <put-attribute name="title" value="Projection add"></put-attribute>
+        <put-attribute name="menu"
+                       value="/WEB-INF/pages/menus/EmployeeMenu.jsp">
+        </put-attribute>
+        <put-attribute name="body"
+                       value="/WEB-INF/pages/employee/projection/add.jsp">
+        </put-attribute>
+    </definition>
+    <definition name="projection/view" extends="base-definition">
+        <put-attribute name="title" value="View Projection"></put-attribute>
+        <put-attribute name="menu"
+                       value="/WEB-INF/pages/menus/EmployeeMenu.jsp">
+        </put-attribute>
+        
+        <put-attribute name="body"
+                       value="/WEB-INF/pages/employee/projection/view.jsp">
+        </put-attribute>
+    </definition>
+    
+    
+    
+    
+    
+
+    <!-- ##################################################################################### -->
+    <!-- EXCEPTION -->
+    <definition name="error/globalException"
+                extends="base-definition">
+        <put-attribute name="title"
+                       value="Exception">
+        </put-attribute>
+        <put-attribute name="body"
+                       value="/WEB-INF/pages/error/globalException.jsp">
+        </put-attribute>
+    </definition>	
+
+
+</tiles-definitions>
